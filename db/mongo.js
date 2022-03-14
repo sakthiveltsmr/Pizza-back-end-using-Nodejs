@@ -4,7 +4,7 @@
 // const { MongoClient } = require("mongodb");
 
 // const DB_URL =
-//   "mongodb+srv://sakthi123:sakthi123@cluster0.ydepc.mongodb.net/person?retryWrites=true&w=majority";
+//   "mongodb+srv://sakthi123:sakthi123@cluster0.ydepc.mongodb.net/pizza?retryWrites=true&w=majority";
 // const DB_NAME = "pizza";
 // const client = new MongoClient(DB_URL); //obj literals
 
@@ -27,3 +27,6 @@
 // };
 
 const mongoose = require("mongoose");
+
+var mongoURL =
+  "mongodb+srv://sakthi123:sakthi123@cluster0.ydepc.mongodb.net/pizza?retryWrites=true&w=majority";
