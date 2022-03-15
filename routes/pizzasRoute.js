@@ -4,4 +4,11 @@ const router = express.Router();
 
 const Pizza = require("../modules/pizzaModule");
 
-router.get("/getallpizzas", (req, res) => {});
+router.get("/getallpizzas", async (req, res) => {
+  try {
+    const pizzas = await Pizza.find({});
+    res.send(pizzas);
+  } catch (error) {
+    return res.status(400).json({ message: error });
+  }
+});
