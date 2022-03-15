@@ -10,6 +10,10 @@ const app = express();
 const PORT = 5000;
 app.use(express.json());
 
+app.use("/", (req, res, next) => {
+  res.send("server running");
+  next();
+});
 app.get("/getpizzas", (req, res) => {
   pizza.find({}, (err, docs) => {
     if (err) {
