@@ -13,19 +13,11 @@ app.use(express.json());
 
 const pizzasRoute = require("./routes/pizzasRoute");
 
+app.use("/api/pizza", pizzasRoute);
+
 app.use("/", (req, res, next) => {
   res.send("server running");
   next();
-});
-app.get("/getpizzas", (req, res) => {
-  pizza.find({}, (err, docs) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log(docs);
-      res.send(docs);
-    }
-  });
 });
 
 app.listen(PORT, () => {
