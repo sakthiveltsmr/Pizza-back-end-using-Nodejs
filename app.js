@@ -5,7 +5,6 @@ const PORT = 5000;
 
 app.use(express.json());
 
-const pizzasRoute = require("./routes/pizzasRoute");
 const path = require("path");
 const pizzasRoute = require("./routes/pizzasRoute");
 const userRoute = require("./routes/userRoute");
