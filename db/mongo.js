@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-var mongoURL =
-  "mongodb+srv://sakthi123:sakthi123@cluster0.ydepc.mongodb.net/pizza?retryWrites=true&w=majority";
+var mongoURL = process.env.DB_URL;
+// ("mongodb+srv://sakthi123:sakthi123@cluster0.ydepc.mongodb.net/pizza?retryWrites=true&w=majority");
 mongoose.connect(mongoURL, { useUnifiedTopology: true, useNewUrlParser: true });
 
 var db = mongoose.connection;
