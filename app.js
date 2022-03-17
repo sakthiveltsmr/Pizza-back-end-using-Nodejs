@@ -13,7 +13,7 @@ app.use(express.json());
 
 const pizzasRoute = require("./routes/pizzasRoute");
 
-app.use("/api/pizza", pizzasRoute);
+app.use("/api/pizzas", pizzasRoute);
 
 app.use("/", (req, res, next) => {
   res.send("server running");
