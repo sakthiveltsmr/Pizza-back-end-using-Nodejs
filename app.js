@@ -1,8 +1,3 @@
-//server start connection;
-
-//import files
-//express
-
 const express = require("express");
 const db = require("./db/mongo");
 const pizza = require("./modules/pizzaModule");
