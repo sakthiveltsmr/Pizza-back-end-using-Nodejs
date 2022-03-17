@@ -14,8 +14,6 @@ app.use("/api/pizzas/", pizzasRoute);
 app.use("/api/users/", userRoute);
 app.use("/api/orders/", ordersRoute);
 
-// app.use("/api/pizzas", pizzasRoute);
-
 app.use("/", (req, res, next) => {
   res.send("server running");
   next();

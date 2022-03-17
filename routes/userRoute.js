@@ -9,6 +9,7 @@ router.post("/register", async (req, res) => {
 
   try {
     newUser.save();
+    console.log("user register successfully");
     res.send("User Registered successfully");
   } catch (error) {
     return res.status(400).json({ message: error });
