@@ -3,6 +3,11 @@ const router = express.Router();
 const User = require("../model/userModel");
 
 router.post("/register", async (req, res) => {
+  // var error = await User.validate(req.body);
+  // if (error) {
+  //   console.log(error);
+  //   return res.status(404).send({ msg: error.details[0].message });
+  // }
   const { name, email, password } = req.body;
 
   const newUser = new User({ name, email, password });
