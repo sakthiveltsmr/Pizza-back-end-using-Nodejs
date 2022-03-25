@@ -8,6 +8,7 @@ const registervalidation = {
       next();
     } catch (error) {
       console.error(error.meassage);
+      console.log("");
     }
   },
 };
