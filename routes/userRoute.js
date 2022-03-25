@@ -1,8 +1,9 @@
 const express = require("express");
+const { regValidation } = require("../middleware/registervalidation");
 const router = express.Router();
 const User = require("../model/userModel");
 
-router.post("/register", async (req, res) => {
+router.post("/register", regValidation, async (req, res) => {
   // var error = await User.validate(req.body);
   // if (error) {
   //   console.log(error);
@@ -16,7 +17,7 @@ router.post("/register", async (req, res) => {
     newUser.save();
 
     console.log("user register successfully");
-    res.send("User Registered successfully");
+    return res.status(200).send("User Registered successfully");
   } catch (error) {
     return res.status(400).json({ message: error });
   }
